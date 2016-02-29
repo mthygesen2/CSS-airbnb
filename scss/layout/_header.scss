@@ -1,0 +1,133 @@
+header {
+  background-image: url(http://www.islands.com/sites/islands.com/files/styles/medium_1x_/public/bird_island_placencia_belize.png?itok=YHvTwFmr);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: wrap;
+}
+
+//display none : works, dates, guests //
+.welcome {
+  border: 2px solid red;
+  text-align: center;
+  color: white;
+  button {
+    display: none;
+  }
+  h1 {
+    font-size: 4em;
+  } p {
+    font-size: 1.2em;
+  }
+}
+
+.flex-form {
+  text-align: center;
+  display: flex;
+  width: 90%;
+  height: 50px;
+  // line-height: 80px;
+  // font-size: 1.5em;
+}
+
+.flex-form > * {
+  flex: 8 1 30px;
+  font-size: 1em;
+  text-align: center;
+  height: 40px;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0,0.1);
+
+}
+
+
+.fa-search{
+  flex: 0 0 40px;
+  background: #ff5a5f;
+  padding-top: 10px;
+  color: white;
+}
+
+input[type="date"], .guests {
+  display: none;
+}
+
+
+
+.nav-top {
+  border: 1px solid red;
+  width: 100%;
+}
+
+/* Flex Container */
+.nav-top ul {
+  border:1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+
+/* Flex Item */
+.nav-top li:first-child {
+  flex:3;
+}
+
+.nav-top li {
+  flex:1;
+}
+
+
+@media all and (max-width:1000px) {
+
+  .nav-top ul {
+    flex-wrap:wrap;
+  }
+
+  .nav-top li {
+    flex:1 1 50%;
+  }
+
+  .nav-top  {
+    flex:1 1 25%;
+  }
+
+}
+
+@media all and (max-width:500px) {
+
+  .nav-top li {
+    flex-basis:100%;
+  }
+
+    /* Turn on flexbox */
+    .wrapper {
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* Reorder items */
+    .wrapper > * {
+      order:999;
+    }
+
+    /* Nav */
+    .nav-top {
+      order:1;
+    }
+
+    .toggleNav {
+      display: block;
+    }
+
+    .nav-top ul {
+      display: none;
+    }
+      .nav-top ul.open {
+        display:flex;
+      }
+
+}

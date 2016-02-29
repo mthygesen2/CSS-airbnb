@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <title>AirBnB</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <header>
     <!-- put in background video -->
+    <div class="wrapper">
+
     <nav class="nav-top">
+      <a href="#" class="toggleNav">☰ Menu</a>
       <ul>
         <li><a href="airbnb.com">airbnb</a></li>
         <li><a href="#">Become a Host</a></li>
@@ -18,28 +21,39 @@
         <li><a href="#">Log In</a></li>
       </ul>
     </nav>
+  </div>
     <div class="welcome">
       <h1>WELCOME HOME</h1>
       <p>
         Rent unique places to stay from local hosts in 190+ countries.
       </p>
-      <!-- <button type="button" name="works">How It Works</button> -->
+      <button type="button" name="works">How It Works</button>
     </div>
     <form class="flex-form">
       <input type="search" placeholder="Where do you want to go?">
-      <!-- <input type="date" name="from" placeholder="check in">
+      <input type="date" name="from" placeholder="check in">
       <input type="date" name="to" placeholder="check out">
-      <select class="" name="">
+      <select class="guests" name="guests">
         <option value="1">1 Guest</option>
         <option value="2">2 Guest</option>
         <option value="3">3 Guest</option>
         <option value="4">4 Guest</option>
         <option value="5">5 Guest</option>
         <option value="6">6 Guest</option>
-      </select> -->
-
-      <input type="submit" value="Search">
+      </select>
+      <i class="fa fa-search"></i>
     </form>
+
   </header>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script>
+
+   $(function() {
+     $('.toggleNav').on('click',function() {
+       $('.nav-top ul').toggleClass('open');
+     });
+   });
+ </script>
 </body>
 </html>
