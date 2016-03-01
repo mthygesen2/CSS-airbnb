@@ -11,7 +11,7 @@ header {
 
 //display none : works, dates, guests //
 .welcome {
-  border: 2px solid red;
+
   text-align: center;
   color: white;
   button {
@@ -24,6 +24,7 @@ header {
   }
 }
 
+//FORM ////////////////////////////////
 .flex-form {
   text-align: center;
   display: flex;
@@ -55,79 +56,101 @@ input[type="date"], .guests {
   display: none;
 }
 
-
+//TOP NAV BAR///////////////////////
 
 .nav-top {
-  border: 1px solid red;
+  display: flex;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .toggleNav {
+    text-align: center;
+    width: 50px;
+  }
 }
 
+img {
+  max-width: 150px;
+  margin: auto;
+}
 /* Flex Container */
 .nav-top ul {
-  border:1px solid black;
   list-style: none;
   margin: 0;
   padding: 0;
   display:flex;
 }
 
-/* Flex Item */
-.nav-top li:first-child {
-  flex:3;
-}
 
 .nav-top li {
-  flex:1;
+  flex-basis:100%;
+
 }
 
+a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:10px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
 
-@media all and (max-width:1000px) {
+  /* Turn on flexbox */
+  .wrapper {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+  }
+
+  .toggleNav {
+    display: block;
+  }
 
   .nav-top ul {
-    flex-wrap:wrap;
+    display: none;
+    width: 100px;
   }
-
-  .nav-top li {
-    flex:1 1 50%;
-  }
-
-  .nav-top  {
-    flex:1 1 25%;
-  }
-
-}
-
-@media all and (max-width:500px) {
-
-  .nav-top li {
-    flex-basis:100%;
-  }
-
-    /* Turn on flexbox */
-    .wrapper {
-      display:flex;
-      flex-direction:column;
-    }
-
-    /* Reorder items */
-    .wrapper > * {
-      order:999;
-    }
-
-    /* Nav */
-    .nav-top {
-      order:1;
-    }
-
-    .toggleNav {
-      display: block;
-    }
-
-    .nav-top ul {
-      display: none;
-    }
-      .nav-top ul.open {
-        display:flex;
+    .nav-top ul.open {
+      display:block;
+      a {
+        padding: 5px;
       }
+    }
 
-}
+//
+// @media all and (max-width:1000px) {
+//
+//   .nav-top ul {
+//     flex-wrap:wrap;
+//   }
+//
+//   .nav-top li {
+//     flex:1 1 50%;
+//   }
+//
+//   .nav-top  {
+//     flex:1 1 25%;
+//   }
+//
+// }
+//
+// @media all and (min-width:500px) {
+//
+//   /* Flex Item */
+//   .nav-top li:first-child {
+//     flex:3;
+//   }
+//
+//   .nav-top li {
+//     flex:1;
+//   }
+//
+//
+// }
