@@ -1,0 +1,25 @@
+.city {
+  @include sectionImg("http://mithun.com/images/projects/Treehouse01_Masthead.jpg","Love This?");
+  h3 {
+    font-size: 3em;
+  }
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border-bottom: 2px solid #aaa;
+  padding: 50px 0 50px 0;
+  color: #aaa;
+  button {
+    width: 200px;
+    border: 1px solid $logo-color;
+    background-color: $logo-color;
+    color: white;
+    align-self: center;
+    font-size: 1em;
+
+  }
+}

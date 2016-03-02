@@ -7,18 +7,25 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: wrap;
+  color: $main-text-color;
 }
 
 //display none : works, dates, guests //
-.welcome {
 
+.img-header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.welcome{
   text-align: center;
-  color: white;
   button {
     display: none;
   }
   h1 {
-    font-size: 4em;
+    font-size: 3em;
+
   } p {
     font-size: 1.2em;
   }
@@ -30,8 +37,6 @@ header {
   display: flex;
   width: 90%;
   height: 50px;
-  // line-height: 80px;
-  // font-size: 1.5em;
 }
 
 .flex-form > * {
@@ -41,13 +46,12 @@ header {
   height: 40px;
   border-radius: 0;
   border: 1px solid rgba(0,0,0,0.1);
-
 }
 
 
 .fa-search{
   flex: 0 0 40px;
-  background: #ff5a5f;
+  background: $logo-color;
   padding-top: 10px;
   color: white;
 }
@@ -88,11 +92,10 @@ img {
 }
 
 a {
-  color:white;
+  color:$logo-color;
   font-weight: 100;
   letter-spacing: 2px;
   text-decoration: none;
-  background:rgba(0,0,0,0.2);
   padding:10px 5px;
   display: inline-block;
   width: 100%;
@@ -106,7 +109,7 @@ a {
     display:flex;
     flex-direction:column;
     align-items:center;
-
+    background-color: white;
   }
 
   .toggleNav {

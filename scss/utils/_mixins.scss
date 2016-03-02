@@ -1,0 +1,15 @@
+@mixin sectionImg($img, $city) {
+    width: 100%;
+    height: 200px;
+    background-image: url($img);
+    display: flex;
+    h3{
+      margin: 0 auto;
+      text-align: center;
+      align-self: center;
+      &:after{
+      content: "#{$city}";
+      color: white;
+    }
+  }
+}
